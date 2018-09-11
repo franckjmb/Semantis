@@ -1,0 +1,23 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /Semantis/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Semantis/index.php [L]
+</IfModule>
+
+<Files wp-config.php>
+order allow,deny
+deny from all
+</Files>
+
+Options All -Indexes
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+# END WordPress
